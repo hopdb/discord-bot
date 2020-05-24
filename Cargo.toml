@@ -3,7 +3,7 @@ authors = ["Vivian Hellyer <vivian@hellyer.dev>"]
 edition = "2018"
 homepage = "https://github.com/hopdb/discord-bot"
 license = "ISC"
-name = "discord-bot"
+name = "hopdb-discord-bot"
 repository = "https://github.com/hopdb/discord-bot.git"
 version = "0.1.0"
 

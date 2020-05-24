@@ -182,17 +182,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "discord-bot"
-version = "0.1.0"
-dependencies = [
- "futures",
- "hop",
- "hop-cli-lib",
- "tokio",
- "twilight",
-]
-
-[[package]]
 name = "dtoa"
 version = "0.4.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -453,6 +442,17 @@ version = "0.1.0"
 source = "git+https://github.com/hopdb/hop#2f97c3ceee86b0431a1db05667de8479ca5203dd"
 dependencies = [
  "dashmap",
+]
+
+[[package]]
+name = "hopdb-discord-bot"
+version = "0.1.0"
+dependencies = [
+ "futures",
+ "hop",
+ "hop-cli-lib",
+ "tokio",
+ "twilight",
 ]
 
 [[package]]
