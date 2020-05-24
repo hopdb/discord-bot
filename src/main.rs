@@ -18,7 +18,6 @@ async fn main() -> Result<(), Box<dyn Error>> {
         &[
             format!("<@{}> ", current_user_id),
             format!("<@!{}> ", current_user_id),
-            format!("<@&{}> ", current_user_id),
         ]
     };
 
