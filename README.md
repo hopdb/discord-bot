@@ -1,7 +1,7 @@
 # hop-discord-bot
 
-A proof-of-concept application using hop's CLI and an in-memory running instance
-of the engine to respond to Discord commands.
+A proof-of-concept application using hop's CLI and an in-process running
+instance of the engine to respond to Discord commands.
 
 ## How do I use it
 
