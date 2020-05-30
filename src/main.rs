@@ -4,7 +4,7 @@ use crate::state::State;
 use futures::StreamExt;
 use std::error::Error;
 use twilight::{
-    gateway::shard::{Event, EventType, Shard, ShardConfig},
+    gateway::{EventTypeFlags, Event, Shard, ShardConfig},
     model::{channel::Message, gateway::GatewayIntents},
 };
 
@@ -25,7 +25,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     config.intents(Some(GatewayIntents::GUILD_MESSAGES));
     let shard = Shard::new(config.build()).await?;
 
-    let mut events = shard.some_events(EventType::MESSAGE_CREATE).await;
+    let mut events = shard.some_events(EventTypeFlags::MESSAGE_CREATE).await;
 
     while let Some(event) = events.next().await {
         if let Event::MessageCreate(message_event) = event {
@@ -61,7 +61,7 @@ async fn handle_message(
     state
         .http
         .create_message(message.channel_id)
-        .content(output)
+        .content(output)?
         .await?;
 
     Ok(())
